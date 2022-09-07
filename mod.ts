@@ -1,16 +1,18 @@
 // build_npmで必要
 type _Timeout = {
-  [Symbol.toPrimitive]: () => number,
-  hasRef: () => boolean,
-  ref: () => _Timeout,
-  refresh: () => _Timeout,
-  unref: () => _Timeout,
+  [Symbol.toPrimitive]: () => number;
+  hasRef: () => boolean;
+  ref: () => _Timeout;
+  refresh: () => _Timeout;
+  unref: () => _Timeout;
 };
 
 let _debounceT: number | undefined | _Timeout;
 
+type milliseconds = number;
+
 namespace UiUtils {
-  export function wait(delay: number): Promise<void> {
+  export function wait(delay: milliseconds): Promise<void> {
     return new Promise((resolve) => {
       globalThis.setTimeout(resolve, delay);
     });
@@ -19,7 +21,7 @@ namespace UiUtils {
   export function debounce(
     // deno-lint-ignore no-explicit-any
     func: (...args: any[]) => void,
-    interval = 300,
+    interval: milliseconds,
     // deno-lint-ignore no-explicit-any
   ): (...args: any[]) => void {
     // deno-lint-ignore no-explicit-any
