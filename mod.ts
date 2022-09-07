@@ -12,12 +12,26 @@ let _debounceT: number | undefined | _Timeout;
 type milliseconds = number;
 
 namespace UiUtils {
+  export const PointerType = {
+    MOUSE: "mouse",
+    PEN: "pen",
+    TOUCH: "touch",
+  } as const;
+  export type PointerType = typeof PointerType[keyof typeof PointerType];
+
+  //XXX 必ずしもUI用かというと…？
+  export const ListenerOptions = Object.freeze({
+    PASSIVE: Object.freeze({ passive: true }) as AddEventListenerOptions,
+  });
+
+  //XXX 必ずしもUI用かというと…？
   export function wait(delay: milliseconds): Promise<void> {
     return new Promise((resolve) => {
       globalThis.setTimeout(resolve, delay);
     });
   }
 
+  //XXX 必ずしもUI用かというと…？
   export function debounce(
     // deno-lint-ignore no-explicit-any
     func: (...args: any[]) => void,
