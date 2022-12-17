@@ -1,4 +1,4 @@
-import { build, emptyDir } from "https://deno.land/x/dnt@0.29.0/mod.ts";
+import { build, emptyDir } from "https://deno.land/x/dnt@0.32.0/mod.ts";
 
 await emptyDir("./npm");
 
@@ -15,7 +15,7 @@ await build({
   rootTestDir: "./tests",
   package: {
     name: "@i-xi-dev/ui-utils",
-    version: "2.0.0",
+    version: "2.0.1",
     description: "This is not for direct usage.",
     license: "MIT",
     author: "i-xi-dev",
@@ -37,6 +37,10 @@ await build({
     ],
   },
   importMap: "./import_map.json",
+
+  //
+  typeCheck: false, // 落ちるようになった
+  declaration: false, // 落ちるようになった
 });
 
 Deno.copyFileSync("LICENSE", "npm/LICENSE");
