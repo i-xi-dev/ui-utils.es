@@ -15,7 +15,7 @@ await build({
   rootTestDir: "./tests",
   package: {
     name: "@i-xi-dev/ui-utils",
-    version: "2.0.1",
+    version: "2.0.2",
     description: "This is not for direct usage.",
     license: "MIT",
     author: "i-xi-dev",
