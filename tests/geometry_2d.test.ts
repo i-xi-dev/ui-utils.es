@@ -10,6 +10,13 @@ Deno.test("Geometry2d.Point.distanceBetween(object, object)", () => {
   assertStrictEquals(p3.y, 330);
 });
 
+Deno.test("Geometry2d.Area.diagonal(object)", () => {
+  const a1 = { width: 30, height: 40 };
+  const d1 = Geometry2d.Area.diagonal(a1);
+
+  assertStrictEquals(d1, 50);
+});
+
 Deno.test("Geometry2d.Rect.centerOf(object)", () => {
   const r1 = { x: 110, y: 220, width: 100, height: 100 };
   const p1 = Geometry2d.Rect.centerOf(r1);
