@@ -24,7 +24,9 @@ namespace Geometry2d {
     width: number,
     height: number,
   };
+
   export namespace Area {
+    /** @deprecated */
     export function diagonal({ width, height }: Area) {
       _assertFinite(width, "width");
       _assertFinite(height, "height");
@@ -33,6 +35,27 @@ namespace Geometry2d {
 
       return Math.sqrt((Math.abs(width) ** 2) + (Math.abs(height) ** 2));
     }
+  }
+
+  export type Vector = {
+    x: number,
+    y: number,
+    length: number,
+    angle: number,
+  };
+
+  export function vector(x: number, y: number): Vector {
+    _assertFinite(x, "x");
+    _assertFinite(y, "y");
+
+    const length = Math.sqrt((Math.abs(x) ** 2) + (Math.abs(y) ** 2));
+    const angle = Math.atan(y / x);
+    return {
+      x,
+      y,
+      length,
+      angle,
+    };
   }
 
   /**
