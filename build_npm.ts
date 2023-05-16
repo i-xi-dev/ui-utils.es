@@ -36,7 +36,6 @@ await build({
       "types",
     ],
   },
-  importMap: "./import_map.json",
   typeCheck: true,
   declaration: true,
 });

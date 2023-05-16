@@ -1,4 +1,4 @@
-import { assertStrictEquals } from "std/testing/asserts";
+import { assertStrictEquals } from "./deps.ts";
 import { Debouncer, Throttler, UiUtils } from "../mod.ts";
 
 Deno.test("UiUtils.wait(number)", async () => {

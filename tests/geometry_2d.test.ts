@@ -1,4 +1,4 @@
-import { assertStrictEquals } from "std/testing/asserts";
+import { assertStrictEquals } from "./deps.ts";
 import { Geometry2d } from "../mod.ts";
 
 Deno.test("Geometry2d.Point.distanceBetween(object, object)", () => {
