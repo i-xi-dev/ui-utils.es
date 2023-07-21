@@ -46,6 +46,4 @@ namespace Keyboard {
   export type Key = typeof Key[keyof typeof Key];
 }
 
-export {
-  Keyboard,
-};
+export { Keyboard };

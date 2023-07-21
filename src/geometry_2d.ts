@@ -3,13 +3,13 @@ namespace Geometry2d {
    * A distance from origin. The "origin" depends on context.
    */
   export type Point = {
-    x: number,
-    y: number,
+    x: number;
+    y: number;
   };
   export namespace Point {
     /**
-     * @param pointA 
-     * @param pointB 
+     * @param pointA
+     * @param pointB
      * @returns A distance from `pointA` to `pointB`. In other words, the position of `pointB` relative to `pointA`.
      */
     export function distanceBetween(pointA: Point, pointB: Point): Point {
@@ -21,8 +21,8 @@ namespace Geometry2d {
   }
 
   export type Area = {
-    width: number,
-    height: number,
+    width: number;
+    height: number;
   };
 
   export namespace Area {
@@ -38,10 +38,10 @@ namespace Geometry2d {
   }
 
   export type Vector = {
-    x: number,
-    y: number,
-    length: number,
-    angle: number,
+    x: number;
+    y: number;
+    length: number;
+    angle: number;
   };
 
   export function vector(x: number, y: number): Vector {
@@ -60,13 +60,13 @@ namespace Geometry2d {
 
   /**
    * A rectangle with its sides parallel to the x-axis and y-axis.
-   * This is equivalent to `(Point & Area)`. `Point` represents the top left vertex of the rectangle. 
+   * This is equivalent to `(Point & Area)`. `Point` represents the top left vertex of the rectangle.
    */
   export type Rect = {
-    x: number,
-    y: number,
-    width: number,
-    height: number,
+    x: number;
+    y: number;
+    width: number;
+    height: number;
   };
   export namespace Rect {
     export function centerOf({ x, y, width, height }: Rect): Point {
@@ -83,7 +83,6 @@ namespace Geometry2d {
       };
     }
   }
-
 }
 
 function _assertFinite(test: unknown, name: string): void {
@@ -98,6 +97,4 @@ function _assertNonNegative(test: number, name: string): void {
   }
 }
 
-export {
-  Geometry2d,
-};
+export { Geometry2d };
