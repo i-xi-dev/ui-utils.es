@@ -1,4 +1,4 @@
-namespace Geometry2d {
+export namespace Geometry2d {
   /**
    * A distance from origin. The "origin" depends on context.
    */
@@ -96,5 +96,3 @@ function _assertNonNegative(test: number, name: string): void {
     throw new RangeError(name);
   }
 }
-
-export { Geometry2d };

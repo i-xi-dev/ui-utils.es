@@ -7,7 +7,7 @@ type milliseconds = number;
 type ThrottlerCallback = () => void;
 
 //XXX 必ずしもUI用かというと…？
-class Throttler {
+export class Throttler {
   #interval: milliseconds;
   #throttling: boolean;
   constructor(interval: milliseconds) {
@@ -30,6 +30,3 @@ class Throttler {
     }, this.#interval);
   }
 }
-Object.freeze(Throttler);
-
-export { Throttler };

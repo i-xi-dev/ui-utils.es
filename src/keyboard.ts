@@ -1,4 +1,4 @@
-namespace Keyboard {
+export namespace Keyboard {
   export const Key = {
     ALT: "Alt",
     ALT_GRAPH: "AltGraph",
@@ -45,5 +45,3 @@ namespace Keyboard {
   } as const;
   export type Key = typeof Key[keyof typeof Key];
 }
-
-export { Keyboard };

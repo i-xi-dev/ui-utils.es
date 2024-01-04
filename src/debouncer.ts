@@ -16,7 +16,7 @@ type milliseconds = number;
 type DebouncerCallback = () => void;
 
 //XXX 必ずしもUI用かというと…？
-class Debouncer {
+export class Debouncer {
   #interval: milliseconds;
   #timerId: number | undefined | _Timeout;
   constructor(interval: milliseconds) {
@@ -35,6 +35,3 @@ class Debouncer {
     }, this.#interval);
   }
 }
-Object.freeze(Debouncer);
-
-export { Debouncer };
