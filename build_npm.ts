@@ -1,4 +1,4 @@
-import { build, emptyDir } from "https://deno.land/x/dnt@0.39.0/mod.ts";
+import { build, emptyDir } from "https://deno.land/x/dnt@0.40.0/mod.ts";
 
 await emptyDir("./npm");
 
@@ -15,7 +15,7 @@ await build({
   rootTestDir: "./tests",
   package: {
     name: "@i-xi-dev/ui-utils",
-    version: "3.0.1",
+    version: "3.0.2",
     description: "This is not for direct usage.",
     license: "MIT",
     author: "i-xi-dev",
