@@ -15,7 +15,7 @@ await build({
   rootTestDir: "./tests",
   package: {
     name: "@i-xi-dev/ui-utils",
-    version: "3.0.2",
+    version: "3.0.3",
     description: "This is not for direct usage.",
     license: "MIT",
     author: "i-xi-dev",
@@ -31,10 +31,10 @@ await build({
     publishConfig: {
       access: "public",
     },
-    files: [
-      "esm",
-      "types",
-    ],
+    // files: [
+    //   "esm",
+    //   "types",
+    // ],
   },
   typeCheck: "both",
   declaration: "inline",
